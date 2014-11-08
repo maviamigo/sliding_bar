@@ -8,6 +8,8 @@ class SlidingGraph {
   int lineWidth;
   float highLimit;
   float lowLimit;
+  int[] values1;
+  int[] values2;
   
 //global private variables
   private boolean isSecond = false;
@@ -34,6 +36,8 @@ class SlidingGraph {
     highLimit = _highLimit;
     lowLimit = _lowLimit;
     lineWidth = _lineWidth; 
+    
+    initializeArray();
   }
   
   //ekrana çizme işlemi
@@ -43,4 +47,11 @@ class SlidingGraph {
   //nesne içerisine ekranda gösterilecek dataların alınması
   void getValue(){
   }
+  
+  private void initializeArrays(){
+    int elements = parseInt(lengthX/lineWidth);
+    values1 = new int[elements];
+    values2 = new int[elements];  
+  }
+  
 }
