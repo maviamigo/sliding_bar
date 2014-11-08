@@ -10,6 +10,7 @@ class SlidingGraph {
   float lowLimit;
   int[] values1;
   int[] values2;
+  int arrayIndex;
   
 //global private variables
   private boolean isSecond = false;
@@ -37,6 +38,8 @@ class SlidingGraph {
     lowLimit = _lowLimit;
     lineWidth = _lineWidth; 
     
+    arrayIndex = 0;
+    
     initializeArray();
   }
   
@@ -45,7 +48,15 @@ class SlidingGraph {
   }
   
   //nesne içerisine ekranda gösterilecek dataların alınması
-  void addValue(){
+  void addValue(float _value){
+    
+    if(isSecond == true){
+      values1[arrayIndex] = _value;    
+    }    
+    else{
+      values2[arrayIndex] = _value;
+    }
+    arrayIndex++;
   }
   
   private void initializeArrays(){
