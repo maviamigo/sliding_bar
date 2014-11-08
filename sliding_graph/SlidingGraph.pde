@@ -8,14 +8,13 @@ class SlidingGraph {
   int lineWidth;
   float highLimit;
   float lowLimit;
-  float[] values1;
-  float[] values2;
-  int arrayIndex;
   color graphicColor;
   
 //global private variables
   private boolean isSecond = false;
-
+  private float[] values1;
+  private float[] values2;
+  private int arrayIndex;
 //constructor
 
   SlidingGraph(int _posX, int _posY, int _lengthX, int _lengthY, float _highLimit, float _lowLimit){
