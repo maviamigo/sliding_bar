@@ -8,9 +8,10 @@ class SlidingGraph {
   int lineWidth;
   float highLimit;
   float lowLimit;
-  int[] values1;
-  int[] values2;
+  float[] values1;
+  float[] values2;
   int arrayIndex;
+  color graphicColor;
   
 //global private variables
   private boolean isSecond = false;
@@ -25,6 +26,11 @@ class SlidingGraph {
     highLimit = _highLimit;
     lowLimit = _lowLimit;
     lineWidth = 10; 
+    
+    arrayIndex = 0;
+    graphicColor = color(0);
+    
+    initializeArrays();
   }
   
 //override
@@ -39,12 +45,14 @@ class SlidingGraph {
     lineWidth = _lineWidth; 
     
     arrayIndex = 0;
+    graphicColor = color(0);
     
-    initializeArray();
+    initializeArrays();
   }
   
   //ekrana çizme işlemi
   void drawGraph(){
+    
   }
   
   //nesne içerisine ekranda gösterilecek dataların alınması
@@ -61,8 +69,8 @@ class SlidingGraph {
   
   private void initializeArrays(){
     int elements = parseInt(lengthX/lineWidth);
-    values1 = new int[elements];
-    values2 = new int[elements];  
+    values1 = new float[elements];
+    values2 = new float[elements];  
   }
   
 }
