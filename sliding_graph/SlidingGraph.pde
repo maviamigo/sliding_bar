@@ -45,7 +45,7 @@ class SlidingGraph {
   }
   
   //nesne içerisine ekranda gösterilecek dataların alınması
-  void getValue(){
+  void addValue(){
   }
   
   private void initializeArrays(){
