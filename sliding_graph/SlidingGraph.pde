@@ -24,6 +24,18 @@ class SlidingGraph {
     lineWidth = 10; 
   }
   
+//override
+
+  SlidingGraph(int _posX, int _posY, int _lengthX, int _lengthY, float _highLimit, float _lowLimit, int _lineWidth){
+    posX = _posX;
+    posY = _posY;
+    lengthX = _lengthX;
+    lengthY = _lengthY; 
+    highLimit = _highLimit;
+    lowLimit = _lowLimit;
+    lineWidth = _lineWidth; 
+  }
+  
   //ekrana çizme işlemi
   void drawGraph(){
   }
